@@ -1,6 +1,7 @@
 import argparse
 import os
-
+import sys
+sys.path.append(r"/media/crj/irn-master/irn-master")
 from misc import pyutils
 
 if __name__ == '__main__':
@@ -9,13 +10,13 @@ if __name__ == '__main__':
 
     # Environment
     parser.add_argument("--num_workers", default=os.cpu_count()//2, type=int)
-    parser.add_argument("--voc12_root", required=True, type=str,
+    parser.add_argument("--voc12_root", default='/media/crj/irn-master/irn-master/IO/Dataset/VOCdevkit/VOC2012', type=str,
                         help="Path to VOC 2012 Devkit, must contain ./JPEGImages as subdirectory.")
 
     # Dataset
-    parser.add_argument("--train_list", default="voc12/train_aug.txt", type=str)
-    parser.add_argument("--val_list", default="voc12/val.txt", type=str)
-    parser.add_argument("--infer_list", default="voc12/train.txt", type=str,
+    parser.add_argument("--train_list", default="/media/crj/irn-master/irn-master/voc12/train_aug.txt", type=str)
+    parser.add_argument("--val_list", default="/media/crj/irn-master/irn-master/voc12/val.txt", type=str)
+    parser.add_argument("--infer_list", default="/media/crj/irn-master/irn-master/voc12/train.txt", type=str,
                         help="voc12/train_aug.txt to train a fully supervised model, "
                              "voc12/train.txt or voc12/val.txt to quickly check the quality of the labels.")
     parser.add_argument("--chainer_eval_set", default="train", type=str)
