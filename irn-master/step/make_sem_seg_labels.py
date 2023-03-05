@@ -27,7 +27,7 @@ def _work(process_id, model, dataset, args):
 
         for iter, pack in enumerate(data_loader):
             img_name = voc12.dataloader.decode_int_filename(pack['name'][0])
-            # orig_img_size = np.asarray(pack['size'])
+            # orig_img_size = np.asarray(pack['size']) 2023.3.5增加object
             orig_img_size = np.asarray(pack['size'],dtype=object)
 
             edge, dp = model(pack['img'][0].cuda(non_blocking=True))

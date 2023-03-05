@@ -1,0 +1,18 @@
+IO
+misc
+net
+result
+sess
+LICENSE
+outline.jpg
+README.md
+*.pyc
+*.txt
+*.npy
+# train_cam.py
+# make_cam.py
+# cam_to_ir_label.py
+# train_irn.py
+# make_ins_seg_labels.py
+# eval_ins_seg.py
+

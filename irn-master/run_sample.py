@@ -124,7 +124,8 @@ if __name__ == '__main__':
 
         timer = pyutils.Timer('step.eval_ins_seg:')
         step.eval_ins_seg.run(args)
-
+    print('over')
+    
     if args.make_sem_seg_pass is True:
         import step.make_sem_seg_labels
 
