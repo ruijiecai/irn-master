@@ -1,86 +1,86 @@
 nohup: ignoring input
 {'num_workers': 12, 'voc12_root': '/media/crj/irn-master/irn-master/IO/Dataset/VOCdevkit/VOC2012', 'train_list': '/media/crj/irn-master/irn-master/voc12/train_aug.txt', 'val_list': '/media/crj/irn-master/irn-master/voc12/val.txt', 'infer_list': '/media/crj/irn-master/irn-master/voc12/train.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.3, 'conf_bg_thres': 0.05, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': True, 'make_cam_pass': True, 'eval_cam_pass': True, 'cam_to_ir_label_pass': True, 'train_irn_pass': True, 'make_ins_seg_pass': True, 'eval_ins_seg_pass': True, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': True}
-step.train_cam: Sun Mar  5 12:44:46 2023
+step.train_cam: Sun Mar  5 15:53:10 2023
 Epoch 1/5
-step:    0/ 3305 loss:0.6813 imps:4.7 lr: 0.1000 etc:Sun Mar  5 15:52:28 2023
-step:  100/ 3305 loss:0.1851 imps:97.1 lr: 0.0973 etc:Sun Mar  5 12:53:52 2023
-step:  200/ 3305 loss:0.1127 imps:107.7 lr: 0.0945 etc:Sun Mar  5 12:52:58 2023
-step:  300/ 3305 loss:0.0965 imps:111.8 lr: 0.0918 etc:Sun Mar  5 12:52:40 2023
-step:  400/ 3305 loss:0.0892 imps:113.9 lr: 0.0890 etc:Sun Mar  5 12:52:32 2023
-step:  500/ 3305 loss:0.0846 imps:115.2 lr: 0.0863 etc:Sun Mar  5 12:52:26 2023
-step:  600/ 3305 loss:0.0861 imps:116.1 lr: 0.0835 etc:Sun Mar  5 12:52:23 2023
-validating ... loss: 0.0703
+step:    0/ 3305 loss:0.6998 imps:5.1 lr: 0.1000 etc:Sun Mar  5 18:46:49 2023
+step:  100/ 3305 loss:0.1858 imps:98.8 lr: 0.0973 etc:Sun Mar  5 16:02:06 2023
+step:  200/ 3305 loss:0.1144 imps:108.7 lr: 0.0945 etc:Sun Mar  5 16:01:18 2023
+step:  300/ 3305 loss:0.0984 imps:112.4 lr: 0.0918 etc:Sun Mar  5 16:01:01 2023
+step:  400/ 3305 loss:0.0888 imps:114.4 lr: 0.0890 etc:Sun Mar  5 16:00:53 2023
+step:  500/ 3305 loss:0.0853 imps:115.7 lr: 0.0863 etc:Sun Mar  5 16:00:48 2023
+step:  600/ 3305 loss:0.0825 imps:116.5 lr: 0.0835 etc:Sun Mar  5 16:00:45 2023
+validating ... loss: 0.0669
 Epoch 2/5
-step:  700/ 3305 loss:0.0809 imps:107.1 lr: 0.0807 etc:Sun Mar  5 12:52:59 2023
-step:  800/ 3305 loss:0.0690 imps:116.3 lr: 0.0779 etc:Sun Mar  5 12:52:52 2023
-step:  900/ 3305 loss:0.0710 imps:118.0 lr: 0.0751 etc:Sun Mar  5 12:52:47 2023
-step: 1000/ 3305 loss:0.0687 imps:118.7 lr: 0.0723 etc:Sun Mar  5 12:52:43 2023
-step: 1100/ 3305 loss:0.0657 imps:119.1 lr: 0.0695 etc:Sun Mar  5 12:52:40 2023
-step: 1200/ 3305 loss:0.0653 imps:119.3 lr: 0.0666 etc:Sun Mar  5 12:52:37 2023
-step: 1300/ 3305 loss:0.0715 imps:119.4 lr: 0.0638 etc:Sun Mar  5 12:52:35 2023
-validating ... loss: 0.0637
+step:  700/ 3305 loss:0.0795 imps:107.2 lr: 0.0807 etc:Sun Mar  5 16:01:21 2023
+step:  800/ 3305 loss:0.0745 imps:116.3 lr: 0.0779 etc:Sun Mar  5 16:01:15 2023
+step:  900/ 3305 loss:0.0710 imps:118.1 lr: 0.0751 etc:Sun Mar  5 16:01:10 2023
+step: 1000/ 3305 loss:0.0695 imps:118.8 lr: 0.0723 etc:Sun Mar  5 16:01:06 2023
+step: 1100/ 3305 loss:0.0674 imps:119.1 lr: 0.0695 etc:Sun Mar  5 16:01:03 2023
+step: 1200/ 3305 loss:0.0687 imps:119.2 lr: 0.0666 etc:Sun Mar  5 16:01:00 2023
+step: 1300/ 3305 loss:0.0660 imps:119.4 lr: 0.0638 etc:Sun Mar  5 16:00:58 2023
+validating ... loss: 0.0604
 Epoch 3/5
-step: 1400/ 3305 loss:0.0579 imps:113.7 lr: 0.0609 etc:Sun Mar  5 12:52:52 2023
-step: 1500/ 3305 loss:0.0605 imps:117.3 lr: 0.0580 etc:Sun Mar  5 12:52:49 2023
-step: 1600/ 3305 loss:0.0558 imps:118.4 lr: 0.0551 etc:Sun Mar  5 12:52:46 2023
-step: 1700/ 3305 loss:0.0535 imps:118.9 lr: 0.0522 etc:Sun Mar  5 12:52:44 2023
-step: 1800/ 3305 loss:0.0612 imps:119.1 lr: 0.0493 etc:Sun Mar  5 12:52:42 2023
-step: 1900/ 3305 loss:0.0576 imps:119.3 lr: 0.0463 etc:Sun Mar  5 12:52:40 2023
-validating ... loss: 0.0651
+step: 1400/ 3305 loss:0.0580 imps:112.9 lr: 0.0609 etc:Sun Mar  5 16:01:15 2023
+step: 1500/ 3305 loss:0.0562 imps:117.0 lr: 0.0580 etc:Sun Mar  5 16:01:12 2023
+step: 1600/ 3305 loss:0.0580 imps:118.2 lr: 0.0551 etc:Sun Mar  5 16:01:10 2023
+step: 1700/ 3305 loss:0.0584 imps:118.7 lr: 0.0522 etc:Sun Mar  5 16:01:07 2023
+step: 1800/ 3305 loss:0.0563 imps:119.0 lr: 0.0493 etc:Sun Mar  5 16:01:05 2023
+step: 1900/ 3305 loss:0.0558 imps:119.2 lr: 0.0463 etc:Sun Mar  5 16:01:04 2023
+validating ... loss: 0.0553
 Epoch 4/5
-step: 2000/ 3305 loss:0.0536 imps:91.4 lr: 0.0433 etc:Sun Mar  5 12:52:52 2023
-step: 2100/ 3305 loss:0.0509 imps:114.6 lr: 0.0403 etc:Sun Mar  5 12:52:50 2023
-step: 2200/ 3305 loss:0.0473 imps:117.1 lr: 0.0373 etc:Sun Mar  5 12:52:48 2023
-step: 2300/ 3305 loss:0.0435 imps:118.0 lr: 0.0343 etc:Sun Mar  5 12:52:47 2023
-step: 2400/ 3305 loss:0.0474 imps:118.5 lr: 0.0312 etc:Sun Mar  5 12:52:45 2023
-step: 2500/ 3305 loss:0.0513 imps:118.8 lr: 0.0281 etc:Sun Mar  5 12:52:43 2023
-step: 2600/ 3305 loss:0.0468 imps:119.1 lr: 0.0249 etc:Sun Mar  5 12:52:42 2023
-validating ... loss: 0.0532
+step: 2000/ 3305 loss:0.0545 imps:90.1 lr: 0.0433 etc:Sun Mar  5 16:01:16 2023
+step: 2100/ 3305 loss:0.0475 imps:114.4 lr: 0.0403 etc:Sun Mar  5 16:01:14 2023
+step: 2200/ 3305 loss:0.0467 imps:117.1 lr: 0.0373 etc:Sun Mar  5 16:01:12 2023
+step: 2300/ 3305 loss:0.0502 imps:118.1 lr: 0.0343 etc:Sun Mar  5 16:01:10 2023
+step: 2400/ 3305 loss:0.0483 imps:118.7 lr: 0.0312 etc:Sun Mar  5 16:01:08 2023
+step: 2500/ 3305 loss:0.0453 imps:119.0 lr: 0.0281 etc:Sun Mar  5 16:01:07 2023
+step: 2600/ 3305 loss:0.0436 imps:119.2 lr: 0.0249 etc:Sun Mar  5 16:01:05 2023
+validating ... loss: 0.0529
 Epoch 5/5
-step: 2700/ 3305 loss:0.0404 imps:111.1 lr: 0.0217 etc:Sun Mar  5 12:52:51 2023
-step: 2800/ 3305 loss:0.0389 imps:116.8 lr: 0.0184 etc:Sun Mar  5 12:52:49 2023
-step: 2900/ 3305 loss:0.0405 imps:118.1 lr: 0.0151 etc:Sun Mar  5 12:52:48 2023
-step: 3000/ 3305 loss:0.0399 imps:118.7 lr: 0.0117 etc:Sun Mar  5 12:52:46 2023
-step: 3100/ 3305 loss:0.0368 imps:119.0 lr: 0.0082 etc:Sun Mar  5 12:52:45 2023
-step: 3200/ 3305 loss:0.0371 imps:119.2 lr: 0.0045 etc:Sun Mar  5 12:52:44 2023
-step: 3300/ 3305 loss:0.0404 imps:119.4 lr: 0.0003 etc:Sun Mar  5 12:52:43 2023
-validating ... loss: 0.0495
-step.make_cam: Sun Mar  5 12:52:51 2023
+step: 2700/ 3305 loss:0.0417 imps:108.7 lr: 0.0217 etc:Sun Mar  5 16:01:14 2023
+step: 2800/ 3305 loss:0.0424 imps:115.7 lr: 0.0184 etc:Sun Mar  5 16:01:13 2023
+step: 2900/ 3305 loss:0.0399 imps:117.4 lr: 0.0151 etc:Sun Mar  5 16:01:11 2023
+step: 3000/ 3305 loss:0.0408 imps:118.1 lr: 0.0117 etc:Sun Mar  5 16:01:10 2023
+step: 3100/ 3305 loss:0.0389 imps:118.5 lr: 0.0082 etc:Sun Mar  5 16:01:09 2023
+step: 3200/ 3305 loss:0.0388 imps:118.8 lr: 0.0045 etc:Sun Mar  5 16:01:07 2023
+step: 3300/ 3305 loss:0.0372 imps:119.0 lr: 0.0003 etc:Sun Mar  5 16:01:06 2023
+validating ... loss: 0.0506
+step.make_cam: Sun Mar  5 16:01:14 2023
 [ 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 ]
-step.eval_cam: Sun Mar  5 12:59:20 2023
-{'iou': array([0.79484772, 0.43878981, 0.28790381, 0.42090258, 0.35629137,
-       0.45381712, 0.61886203, 0.5399942 , 0.48020415, 0.28714524,
-       0.57024545, 0.40147095, 0.47580869, 0.49750074, 0.62109587,
-       0.52458383, 0.43352809, 0.6185401 , 0.43220555, 0.51040141,
-       0.46937694]), 'miou': 0.48731026828214574}
-step.cam_to_ir_label: Sun Mar  5 12:59:25 2023
+step.eval_cam: Sun Mar  5 16:07:43 2023
+{'iou': array([0.79297694, 0.42369447, 0.28056149, 0.43126151, 0.37099867,
+       0.45979663, 0.64124632, 0.52996897, 0.48913609, 0.2878519 ,
+       0.56843603, 0.38919243, 0.47913809, 0.48831715, 0.60277432,
+       0.53337983, 0.428789  , 0.6092859 , 0.43664713, 0.50275326,
+       0.46924066]), 'miou': 0.4864498467866047}
+step.cam_to_ir_label: Sun Mar  5 16:07:48 2023
 [ 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 ]
-step.train_irn: Sun Mar  5 13:12:59 2023
+step.train_irn: Sun Mar  5 16:21:34 2023
 Epoch 1/3
-step:    0/  990 loss:0.7891 0.6011 4.0536 0.1827 imps:4.9 lr: 0.1000 etc:Sun Mar  5 15:01:24 2023
-step:   50/  990 loss:0.5678 0.5072 3.9328 0.0856 imps:29.7 lr: 0.0954 etc:Sun Mar  5 13:30:47 2023
-step:  100/  990 loss:0.4387 0.3801 3.7614 0.1299 imps:31.9 lr: 0.0909 etc:Sun Mar  5 13:29:33 2023
-step:  150/  990 loss:0.4228 0.3763 3.5885 0.1596 imps:32.7 lr: 0.0863 etc:Sun Mar  5 13:29:07 2023
-step:  200/  990 loss:0.4155 0.3598 3.5452 0.1500 imps:33.2 lr: 0.0816 etc:Sun Mar  5 13:28:53 2023
-step:  250/  990 loss:0.4056 0.3569 3.4657 0.1712 imps:33.5 lr: 0.0770 etc:Sun Mar  5 13:28:46 2023
-step:  300/  990 loss:0.3967 0.3461 3.2759 0.2103 imps:33.6 lr: 0.0723 etc:Sun Mar  5 13:28:41 2023
+step:    0/  990 loss:0.9564 0.4467 4.0407 0.1899 imps:3.9 lr: 0.1000 etc:Sun Mar  5 18:37:19 2023
+step:   50/  990 loss:0.5519 0.4981 3.9880 0.0545 imps:28.3 lr: 0.0954 etc:Sun Mar  5 16:40:16 2023
+step:  100/  990 loss:0.4406 0.3853 3.8148 0.1327 imps:29.5 lr: 0.0909 etc:Sun Mar  5 16:39:28 2023
+step:  150/  990 loss:0.4241 0.3732 3.6676 0.1528 imps:30.2 lr: 0.0863 etc:Sun Mar  5 16:39:02 2023
+step:  200/  990 loss:0.4194 0.3711 3.5837 0.1567 imps:30.6 lr: 0.0816 etc:Sun Mar  5 16:38:51 2023
+step:  250/  990 loss:0.4026 0.3477 3.5066 0.1622 imps:31.2 lr: 0.0770 etc:Sun Mar  5 16:38:32 2023
+step:  300/  990 loss:0.4031 0.3606 3.3589 0.2035 imps:31.6 lr: 0.0723 etc:Sun Mar  5 16:38:18 2023
 Epoch 2/3
-step:  350/  990 loss:0.3930 0.3422 3.1706 0.2289 imps:25.9 lr: 0.0675 etc:Sun Mar  5 13:28:56 2023
-step:  400/  990 loss:0.3933 0.3449 3.1516 0.2141 imps:31.5 lr: 0.0628 etc:Sun Mar  5 13:28:51 2023
-step:  450/  990 loss:0.3925 0.3469 3.0597 0.2255 imps:32.7 lr: 0.0580 etc:Sun Mar  5 13:28:47 2023
-step:  500/  990 loss:0.3913 0.3438 3.0849 0.2108 imps:33.2 lr: 0.0531 etc:Sun Mar  5 13:28:44 2023
-step:  550/  990 loss:0.3868 0.3431 3.0128 0.2215 imps:33.5 lr: 0.0482 etc:Sun Mar  5 13:28:42 2023
-step:  600/  990 loss:0.3791 0.3337 2.9611 0.2244 imps:33.7 lr: 0.0432 etc:Sun Mar  5 13:28:39 2023
-step:  650/  990 loss:0.3686 0.3237 2.9863 0.2177 imps:33.8 lr: 0.0382 etc:Sun Mar  5 13:28:37 2023
+step:  350/  990 loss:0.3987 0.3509 3.1925 0.2181 imps:25.8 lr: 0.0675 etc:Sun Mar  5 16:38:27 2023
+step:  400/  990 loss:0.3847 0.3346 3.1738 0.2175 imps:30.9 lr: 0.0628 etc:Sun Mar  5 16:38:18 2023
+step:  450/  990 loss:0.3877 0.3417 3.1045 0.2294 imps:32.0 lr: 0.0580 etc:Sun Mar  5 16:38:11 2023
+step:  500/  990 loss:0.3898 0.3449 3.1126 0.2135 imps:32.5 lr: 0.0531 etc:Sun Mar  5 16:38:05 2023
+step:  550/  990 loss:0.3874 0.3460 3.0765 0.2197 imps:32.8 lr: 0.0482 etc:Sun Mar  5 16:38:00 2023
+step:  600/  990 loss:0.3865 0.3315 3.0434 0.2138 imps:32.9 lr: 0.0432 etc:Sun Mar  5 16:37:57 2023
+step:  650/  990 loss:0.3814 0.3338 2.9987 0.2192 imps:33.1 lr: 0.0382 etc:Sun Mar  5 16:37:53 2023
 Epoch 3/3
-step:  700/  990 loss:0.3752 0.3256 2.9731 0.2173 imps:30.1 lr: 0.0331 etc:Sun Mar  5 13:28:44 2023
-step:  750/  990 loss:0.3737 0.3311 2.8972 0.2174 imps:32.5 lr: 0.0279 etc:Sun Mar  5 13:28:42 2023
-step:  800/  990 loss:0.3766 0.3271 2.9491 0.2026 imps:33.2 lr: 0.0226 etc:Sun Mar  5 13:28:40 2023
-step:  850/  990 loss:0.3728 0.3263 2.9062 0.2043 imps:33.6 lr: 0.0172 etc:Sun Mar  5 13:28:38 2023
-step:  900/  990 loss:0.3783 0.3292 2.9420 0.2035 imps:33.8 lr: 0.0116 etc:Sun Mar  5 13:28:37 2023
-step:  950/  990 loss:0.3759 0.3271 2.9023 0.2008 imps:33.9 lr: 0.0056 etc:Sun Mar  5 13:28:36 2023
+step:  700/  990 loss:0.3829 0.3383 3.0160 0.2117 imps:29.1 lr: 0.0331 etc:Sun Mar  5 16:37:59 2023
+step:  750/  990 loss:0.3780 0.3281 2.9950 0.1986 imps:30.9 lr: 0.0279 etc:Sun Mar  5 16:37:58 2023
+step:  800/  990 loss:0.3791 0.3374 3.0047 0.2119 imps:31.3 lr: 0.0226 etc:Sun Mar  5 16:37:59 2023
+step:  850/  990 loss:0.3772 0.3312 2.9228 0.2102 imps:31.7 lr: 0.0172 etc:Sun Mar  5 16:37:57 2023
+step:  900/  990 loss:0.3771 0.3310 2.9273 0.2077 imps:31.8 lr: 0.0116 etc:Sun Mar  5 16:37:58 2023
+step:  950/  990 loss:0.3741 0.3253 2.9230 0.2154 imps:32.0 lr: 0.0056 etc:Sun Mar  5 16:37:56 2023
 Analyzing displacements mean ... done.
-step.make_ins_seg_labels: Sun Mar  5 13:28:48 2023
+step.make_ins_seg_labels: Sun Mar  5 16:38:11 2023
 [ /media/crj/irn-master/irn-master/step/make_ins_seg_labels.py:122: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
   size = np.asarray(pack['size'],dtype=object)
 /media/crj/irn-master/irn-master/step/make_ins_seg_labels.py:122: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
@@ -90,25 +90,60 @@ step.make_ins_seg_labels: Sun Mar  5 13:28:48 2023
 /media/crj/irn-master/irn-master/step/make_ins_seg_labels.py:122: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
   size = np.asarray(pack['size'],dtype=object)
 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 ]
-step.eval_ins_seg: Sun Mar  5 13:46:43 2023
-/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/chainercv/datasets/voc/voc_utils.py:59: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
-  mask = np.array(mask).astype(np.bool)
+step.eval_ins_seg: Sun Mar  5 16:59:05 2023
+0.5iou: {'ap': array([0.38506503, 0.0018617 , 0.53844183, 0.28405687, 0.13663846,
+       0.64512073, 0.35801883, 0.58985455, 0.04871739, 0.458154  ,
+       0.09613044, 0.49965673, 0.52218787, 0.47351411, 0.2090748 ,
+       0.0701366 , 0.33433163, 0.2877388 , 0.54240974, 0.52191412]), 'map': 0.3501512110876983}
+over
+step.make_sem_seg_labels: Sun Mar  5 16:59:14 2023
+[/media/crj/irn-master/irn-master/step/make_sem_seg_labels.py:30: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  orig_img_size = np.asarray(pack['size'])
+terminate called without an active exception
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7f9b986938b0>
 Traceback (most recent call last):
-  File "/media/crj/irn-master/irn-master/run_sample.py", line 126, in <module>
-    step.eval_ins_seg.run(args)
-  File "/media/crj/irn-master/irn-master/step/eval_ins_seg.py", line 10, in run
-    gt_masks = [dataset.get_example_by_keys(i, (1,))[0] for i in range(len(dataset))]
-  File "/media/crj/irn-master/irn-master/step/eval_ins_seg.py", line 10, in <listcomp>
-    gt_masks = [dataset.get_example_by_keys(i, (1,))[0] for i in range(len(dataset))]
-  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/chainercv/chainer_experimental/datasets/sliceable/getter_dataset.py", line 89, in get_example_by_keys
-    cache[getter_index] = self._getters[getter_index](index)
-  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/chainercv/datasets/voc/voc_instance_segmentation_dataset.py", line 65, in _get_annotations
-    mask, label = voc_utils.image_wise_to_instance_wise(
-  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/chainercv/datasets/voc/voc_utils.py", line 59, in image_wise_to_instance_wise
-    mask = np.array(mask).astype(np.bool)
-  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/numpy/__init__.py", line 305, in __getattr__
-    raise AttributeError(__former_attrs__[attr])
-AttributeError: module 'numpy' has no attribute 'bool'.
-`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
-The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
-    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1466, in __del__
+    self._shutdown_workers()
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1430, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/multiprocessing/popen_fork.py", line 40, in wait
+    if not wait([self.sentinel], timeout):
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/multiprocessing/connection.py", line 936, in wait
+    ready = selector.select(timeout)
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/selectors.py", line 421, in select
+    if event & ~self._EVENT_READ:
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 6922) is killed by signal: Aborted. 
+Traceback (most recent call last):
+  File "/media/crj/irn-master/irn-master/run_sample.py", line 132, in <module>
+    step.make_sem_seg_labels.run(args)
+  File "/media/crj/irn-master/irn-master/step/make_sem_seg_labels.py", line 70, in run
+    multiprocessing.spawn(_work, nprocs=n_gpus, args=(model, dataset, args), join=True)
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/torch/multiprocessing/spawn.py", line 240, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/torch/multiprocessing/spawn.py", line 198, in start_processes
+    while not context.join():
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/torch/multiprocessing/spawn.py", line 160, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/site-packages/torch/multiprocessing/spawn.py", line 69, in _wrap
+    fn(i, *args)
+  File "/media/crj/irn-master/irn-master/step/make_sem_seg_labels.py", line 30, in _work
+    orig_img_size = np.asarray(pack['size'])
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/home/crj/miniconda3/envs/IRNet/lib/python3.9/multiprocessing/spawn.py", line 126, in _main
+    self = reduction.pickle.load(from_parent)
+_pickle.UnpicklingError: pickle data was truncated
+/home/crj/miniconda3/envs/IRNet/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 26 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

@@ -1,0 +1,84 @@
+{'num_workers': 12, 'voc12_root': '/media/crj/irn-master/irn-master/IO/Dataset/VOCdevkit/VOC2012', 'train_list': '/media/crj/irn-master/irn-master/voc12/train_aug.txt', 'val_list': '/media/crj/irn-master/irn-master/voc12/val.txt', 'infer_list': '/media/crj/irn-master/irn-master/voc12/train.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.3, 'conf_bg_thres': 0.05, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': True, 'make_cam_pass': True, 'eval_cam_pass': True, 'cam_to_ir_label_pass': True, 'train_irn_pass': True, 'make_ins_seg_pass': True, 'eval_ins_seg_pass': True, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': True}
+step.train_cam: Sun Mar  5 12:44:46 2023
+Epoch 1/5
+step:    0/ 3305 loss:0.6813 imps:4.7 lr: 0.1000 etc:Sun Mar  5 15:52:28 2023
+step:  100/ 3305 loss:0.1851 imps:97.1 lr: 0.0973 etc:Sun Mar  5 12:53:52 2023
+step:  200/ 3305 loss:0.1127 imps:107.7 lr: 0.0945 etc:Sun Mar  5 12:52:58 2023
+step:  300/ 3305 loss:0.0965 imps:111.8 lr: 0.0918 etc:Sun Mar  5 12:52:40 2023
+step:  400/ 3305 loss:0.0892 imps:113.9 lr: 0.0890 etc:Sun Mar  5 12:52:32 2023
+step:  500/ 3305 loss:0.0846 imps:115.2 lr: 0.0863 etc:Sun Mar  5 12:52:26 2023
+step:  600/ 3305 loss:0.0861 imps:116.1 lr: 0.0835 etc:Sun Mar  5 12:52:23 2023
+validating ... loss: 0.0703
+Epoch 2/5
+step:  700/ 3305 loss:0.0809 imps:107.1 lr: 0.0807 etc:Sun Mar  5 12:52:59 2023
+step:  800/ 3305 loss:0.0690 imps:116.3 lr: 0.0779 etc:Sun Mar  5 12:52:52 2023
+step:  900/ 3305 loss:0.0710 imps:118.0 lr: 0.0751 etc:Sun Mar  5 12:52:47 2023
+step: 1000/ 3305 loss:0.0687 imps:118.7 lr: 0.0723 etc:Sun Mar  5 12:52:43 2023
+step: 1100/ 3305 loss:0.0657 imps:119.1 lr: 0.0695 etc:Sun Mar  5 12:52:40 2023
+step: 1200/ 3305 loss:0.0653 imps:119.3 lr: 0.0666 etc:Sun Mar  5 12:52:37 2023
+step: 1300/ 3305 loss:0.0715 imps:119.4 lr: 0.0638 etc:Sun Mar  5 12:52:35 2023
+validating ... loss: 0.0637
+Epoch 3/5
+step: 1400/ 3305 loss:0.0579 imps:113.7 lr: 0.0609 etc:Sun Mar  5 12:52:52 2023
+step: 1500/ 3305 loss:0.0605 imps:117.3 lr: 0.0580 etc:Sun Mar  5 12:52:49 2023
+step: 1600/ 3305 loss:0.0558 imps:118.4 lr: 0.0551 etc:Sun Mar  5 12:52:46 2023
+step: 1700/ 3305 loss:0.0535 imps:118.9 lr: 0.0522 etc:Sun Mar  5 12:52:44 2023
+step: 1800/ 3305 loss:0.0612 imps:119.1 lr: 0.0493 etc:Sun Mar  5 12:52:42 2023
+step: 1900/ 3305 loss:0.0576 imps:119.3 lr: 0.0463 etc:Sun Mar  5 12:52:40 2023
+validating ... loss: 0.0651
+Epoch 4/5
+step: 2000/ 3305 loss:0.0536 imps:91.4 lr: 0.0433 etc:Sun Mar  5 12:52:52 2023
+step: 2100/ 3305 loss:0.0509 imps:114.6 lr: 0.0403 etc:Sun Mar  5 12:52:50 2023
+step: 2200/ 3305 loss:0.0473 imps:117.1 lr: 0.0373 etc:Sun Mar  5 12:52:48 2023
+step: 2300/ 3305 loss:0.0435 imps:118.0 lr: 0.0343 etc:Sun Mar  5 12:52:47 2023
+step: 2400/ 3305 loss:0.0474 imps:118.5 lr: 0.0312 etc:Sun Mar  5 12:52:45 2023
+step: 2500/ 3305 loss:0.0513 imps:118.8 lr: 0.0281 etc:Sun Mar  5 12:52:43 2023
+step: 2600/ 3305 loss:0.0468 imps:119.1 lr: 0.0249 etc:Sun Mar  5 12:52:42 2023
+validating ... loss: 0.0532
+Epoch 5/5
+step: 2700/ 3305 loss:0.0404 imps:111.1 lr: 0.0217 etc:Sun Mar  5 12:52:51 2023
+step: 2800/ 3305 loss:0.0389 imps:116.8 lr: 0.0184 etc:Sun Mar  5 12:52:49 2023
+step: 2900/ 3305 loss:0.0405 imps:118.1 lr: 0.0151 etc:Sun Mar  5 12:52:48 2023
+step: 3000/ 3305 loss:0.0399 imps:118.7 lr: 0.0117 etc:Sun Mar  5 12:52:46 2023
+step: 3100/ 3305 loss:0.0368 imps:119.0 lr: 0.0082 etc:Sun Mar  5 12:52:45 2023
+step: 3200/ 3305 loss:0.0371 imps:119.2 lr: 0.0045 etc:Sun Mar  5 12:52:44 2023
+step: 3300/ 3305 loss:0.0404 imps:119.4 lr: 0.0003 etc:Sun Mar  5 12:52:43 2023
+validating ... loss: 0.0495
+step.make_cam: Sun Mar  5 12:52:51 2023
+[ ]
+step.eval_cam: Sun Mar  5 12:59:20 2023
+{'iou': array([0.79484772, 0.43878981, 0.28790381, 0.42090258, 0.35629137,
+       0.45381712, 0.61886203, 0.5399942 , 0.48020415, 0.28714524,
+       0.57024545, 0.40147095, 0.47580869, 0.49750074, 0.62109587,
+       0.52458383, 0.43352809, 0.6185401 , 0.43220555, 0.51040141,
+       0.46937694]), 'miou': 0.48731026828214574}
+step.cam_to_ir_label: Sun Mar  5 12:59:25 2023
+[ ]
+step.train_irn: Sun Mar  5 13:12:59 2023
+Epoch 1/3
+step:    0/  990 loss:0.7891 0.6011 4.0536 0.1827 imps:4.9 lr: 0.1000 etc:Sun Mar  5 15:01:24 2023
+step:   50/  990 loss:0.5678 0.5072 3.9328 0.0856 imps:29.7 lr: 0.0954 etc:Sun Mar  5 13:30:47 2023
+step:  100/  990 loss:0.4387 0.3801 3.7614 0.1299 imps:31.9 lr: 0.0909 etc:Sun Mar  5 13:29:33 2023
+step:  150/  990 loss:0.4228 0.3763 3.5885 0.1596 imps:32.7 lr: 0.0863 etc:Sun Mar  5 13:29:07 2023
+step:  200/  990 loss:0.4155 0.3598 3.5452 0.1500 imps:33.2 lr: 0.0816 etc:Sun Mar  5 13:28:53 2023
+step:  250/  990 loss:0.4056 0.3569 3.4657 0.1712 imps:33.5 lr: 0.0770 etc:Sun Mar  5 13:28:46 2023
+step:  300/  990 loss:0.3967 0.3461 3.2759 0.2103 imps:33.6 lr: 0.0723 etc:Sun Mar  5 13:28:41 2023
+Epoch 2/3
+step:  350/  990 loss:0.3930 0.3422 3.1706 0.2289 imps:25.9 lr: 0.0675 etc:Sun Mar  5 13:28:56 2023
+step:  400/  990 loss:0.3933 0.3449 3.1516 0.2141 imps:31.5 lr: 0.0628 etc:Sun Mar  5 13:28:51 2023
+step:  450/  990 loss:0.3925 0.3469 3.0597 0.2255 imps:32.7 lr: 0.0580 etc:Sun Mar  5 13:28:47 2023
+step:  500/  990 loss:0.3913 0.3438 3.0849 0.2108 imps:33.2 lr: 0.0531 etc:Sun Mar  5 13:28:44 2023
+step:  550/  990 loss:0.3868 0.3431 3.0128 0.2215 imps:33.5 lr: 0.0482 etc:Sun Mar  5 13:28:42 2023
+step:  600/  990 loss:0.3791 0.3337 2.9611 0.2244 imps:33.7 lr: 0.0432 etc:Sun Mar  5 13:28:39 2023
+step:  650/  990 loss:0.3686 0.3237 2.9863 0.2177 imps:33.8 lr: 0.0382 etc:Sun Mar  5 13:28:37 2023
+Epoch 3/3
+step:  700/  990 loss:0.3752 0.3256 2.9731 0.2173 imps:30.1 lr: 0.0331 etc:Sun Mar  5 13:28:44 2023
+step:  750/  990 loss:0.3737 0.3311 2.8972 0.2174 imps:32.5 lr: 0.0279 etc:Sun Mar  5 13:28:42 2023
+step:  800/  990 loss:0.3766 0.3271 2.9491 0.2026 imps:33.2 lr: 0.0226 etc:Sun Mar  5 13:28:40 2023
+step:  850/  990 loss:0.3728 0.3263 2.9062 0.2043 imps:33.6 lr: 0.0172 etc:Sun Mar  5 13:28:38 2023
+step:  900/  990 loss:0.3783 0.3292 2.9420 0.2035 imps:33.8 lr: 0.0116 etc:Sun Mar  5 13:28:37 2023
+step:  950/  990 loss:0.3759 0.3271 2.9023 0.2008 imps:33.9 lr: 0.0056 etc:Sun Mar  5 13:28:36 2023
+Analyzing displacements mean ... done.
+step.make_ins_seg_labels: Sun Mar  5 13:28:48 2023
+[ ]
+step.eval_ins_seg: Sun Mar  5 13:46:43 2023
