@@ -19,27 +19,30 @@ import importlib
 # import voc12.dataloader
 from misc import pyutils, torchutils
 
-all_xinguan_image_path=[]
+all_image_path=[]
 
 base_path='/media/crj/irn-master/irn-master/IO/Dataset/data/新冠肺炎/Image'
 for jpg_folder in os.listdir(base_path):
     for jpg_file in os.listdir(os.path.join(base_path,jpg_folder)):
         image_name=os.path.join(base_path,jpg_folder,jpg_file)
-        all_xinguan_image_path.append(image_name)
+        all_image_path.append(image_name)
 
 base_path='/media/crj/irn-master/irn-master/IO/Dataset/data/普通肺炎/Image'
 for jpg_folder in os.listdir(base_path):
     for jpg_file in os.listdir(os.path.join(base_path,jpg_folder)):
         image_name=os.path.join(base_path,jpg_folder,jpg_file)
-        all_xinguan_image_path.append(image_name)
+        all_image_path.append(image_name)
 
 import random
-random.shuffle(all_xinguan_image_path)
+random.shuffle(all_image_path)
+
+from sklearn.model_selection import train_test_split
+train_img_path, test_img_path = train_test_split(all_image_path, test_size=0.3)
 
 CAT_LIST=['新冠肺炎','普通肺炎']
 CAT_NAME_TO_NUM = dict(zip(CAT_LIST,range(len(CAT_LIST))))
 cls_labels_dict={}
-for item in all_xinguan_image_path:
+for item in all_image_path:
     cat_name=item.split('/')[8]
 
     label=np.zeros(len(CAT_LIST))
@@ -148,22 +151,48 @@ class VOC12ClassificationDataset(VOC12ImageDataset):
 
         return out
 
+from torchvision.ops import sigmoid_focal_loss
+
+def validate(model, data_loader):
+    print('validating ... ', flush=True, end='')
+
+    val_loss_meter = pyutils.AverageMeter('loss1', 'loss2')
+
+    model.eval()
+
+    with torch.no_grad():
+        for pack in data_loader:
+            img = pack['img']
+
+            label = pack['label'].cuda(non_blocking=True)
+
+            x = model(img)
+            loss1 = sigmoid_focal_loss(x, label,reduction='mean')
+
+            val_loss_meter.add({'loss1': loss1.item()})
+
+    model.train()
+
+    print('loss: %.4f' % (val_loss_meter.pop('loss1')))
+
+    return
+
 def run(args):
 
     model = getattr(importlib.import_module(args.cam_network), 'Net')()
 
 
-    train_dataset = VOC12ClassificationDataset(all_xinguan_image_path, voc12_root=args.voc12_root,
+    train_dataset = VOC12ClassificationDataset(train_img_path, voc12_root=args.voc12_root,
                                                                 resize_long=(320, 640), hor_flip=True,
                                                                 crop_size=512, crop_method="random")
     train_data_loader = DataLoader(train_dataset, batch_size=args.cam_batch_size,
                                    shuffle=True, num_workers=args.num_workers, pin_memory=True, drop_last=True)
     max_step = (len(train_dataset) // args.cam_batch_size) * args.cam_num_epoches
 
-    # val_dataset = voc12.dataloader.VOC12ClassificationDataset(args.val_list, voc12_root=args.voc12_root,
-    #                                                           crop_size=512)
-    # val_data_loader = DataLoader(val_dataset, batch_size=args.cam_batch_size,
-    #                              shuffle=False, num_workers=args.num_workers, pin_memory=True, drop_last=True)
+    val_dataset = VOC12ClassificationDataset(test_img_path, voc12_root=args.voc12_root,
+                                                              crop_size=512)
+    val_data_loader = DataLoader(val_dataset, batch_size=args.cam_batch_size,
+                                 shuffle=False, num_workers=args.num_workers, pin_memory=True, drop_last=True)
 
     param_groups = model.trainable_parameters()
     optimizer = torchutils.PolyOptimizer([
@@ -188,8 +217,8 @@ def run(args):
             label = pack['label'].cuda(non_blocking=True)
 
             x = model(img)
-            # loss = F.multilabel_soft_margin_loss(x, label)
-            loss=binary_focal_loss(x,label)
+            #loss = F.multilabel_soft_margin_loss(x, label)
+            loss=sigmoid_focal_loss(x,label,reduction='mean')
             avg_meter.add({'loss1': loss.item()})
 
             optimizer.zero_grad()
@@ -205,5 +234,9 @@ def run(args):
                       'lr: %.4f' % (optimizer.param_groups[0]['lr']),
                       'etc:%s' % (timer.str_estimated_complete()), flush=True)
                 
+        else:
+            validate(model, val_data_loader)
+            timer.reset_stage() 
+            
     torch.save(model.module.state_dict(), args.cam_weights_name)
     torch.cuda.empty_cache()
