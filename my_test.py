@@ -46,7 +46,22 @@ for item in all_xinguan_image_path:
     label[CAT_NAME_TO_NUM[cat_name]]=1.0
     cls_labels_dict[item]=label
 
+# import torch.nn as nn
+# def binary_focal_loss(pred, truth, gamma=2., alpha=.25):
+#     eps = 1e-8
+#     pred = nn.Softmax(1)(pred)
+#     truth = F.one_hot(truth.long(), num_classes = pred.shape[1]).permute(0,3,1,2).contiguous()
 
+#     pt_1 = torch.where(truth == 1, pred, torch.ones_like(pred))
+#     pt_0 = torch.where(truth == 0, pred, torch.zeros_like(pred))
+
+#     pt_1 = torch.clamp(pt_1, eps, 1. - eps)
+#     pt_0 = torch.clamp(pt_0, eps, 1. - eps)
+
+#     out1 = -torch.mean(alpha * torch.pow(1. - pt_1, gamma) * torch.log(pt_1)) 
+#     out0 = -torch.mean((1 - alpha) * torch.pow(pt_0, gamma) * torch.log(1. - pt_0))
+
+#     return out1 + out0
 
 class TorchvisionNormalize():
     def __init__(self, mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)):
@@ -174,7 +189,7 @@ def run(args):
 
             x = model(img)
             # loss = F.multilabel_soft_margin_loss(x, label)
-
+            loss=binary_focal_loss(x,label)
             avg_meter.add({'loss1': loss.item()})
 
             optimizer.zero_grad()
